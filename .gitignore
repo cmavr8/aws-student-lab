@@ -1,0 +1,15 @@
+# Python's virtual env
+venv/*
+
+# IDE files
+.idea*
+
+#  All .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# .tfvars files
+*.tfvars

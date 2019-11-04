@@ -19,12 +19,20 @@ Then you need to setup a few prerequisites:
 * [Setup terraform and AWS CLI](https://learn.hashicorp.com/terraform/getting-started/install)
 * [Setup terraform remote state](https://learn.hashicorp.com/terraform/getting-started/remote)
 
+Setup python etc. E.g. on Ubuntu, it's something along these lines:
+
+    virtualenv -p python3 venv
+    source venv/bin/activate
+    pip install --upgrade awscli
+
 Then just go for it:
 
     terraform init
     terraform apply
     
-To get the user credentials (very dangerous, use with care!) try:
+It will fail the first time. Make sure to set environment variables `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` in Terraform cloud and retry the `apply`.
+
+After successful execution, to get the user credentials (very dangerous, use with care!) try:
 
     terraform output passwords > SUPERSECRET
     python3 decrypt.py

@@ -18,6 +18,7 @@ First you need to setup a few prerequisites:
 * [install terraform locally](https://learn.hashicorp.com/terraform/getting-started/install),
 * [add your Terraform Cloud API key in a file on your system](https://learn.hashicorp.com/terraform/getting-started/remote),
 * protect the key by running `chmod 600 ~/.terraformrc` (this is not in the instructions but I think is a good idea since the home dir on some systems is world readable),
+* copy `terraform.auto.tfvars.example` to `terraform.auto.tfvars`,
 * then, edit `setup.tf` and `terraform.auto.tfvars` to suit your needs.
 
 Finally just go for it:

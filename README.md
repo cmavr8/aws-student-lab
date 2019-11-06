@@ -33,8 +33,7 @@ After successful execution, to get the user credentials (very dangerous, use wit
     terraform output passwords > SUPERSECRET
     python3 decrypt.py
 
-For a more full walkthrough, see [this post on Chris's security notes](https://chrissecnotes.blogspot.com/2019/10/practical-aws-security-setup.html
-).
+For a more full walkthrough, see [this post on Chris's security notes](https://chrissecnotes.blogspot.com/2019/11/practical-aws-security-setup.html).
 
 ## Alternative setup
 If you don't want to use Terraform Cloud, you'll have to have aws-cli and store terraform state locally. You'll need to tweak the config files and follow most steps of [the terraform guide](https://learn.hashicorp.com/terraform/getting-started/install).

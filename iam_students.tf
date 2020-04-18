@@ -112,3 +112,9 @@ output "usernames" {
 output "passwords" {
   value = "${aws_iam_user_login_profile.student-profile.*.encrypted_password}"
 }
+
+# Dummy S3 bucket, which should cause a checkov check to fail
+resource "aws_s3_bucket" "s3_bucket" {
+  bucket = "dummybucket"
+  acl = "private"
+}

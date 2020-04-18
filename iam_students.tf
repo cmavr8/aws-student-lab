@@ -112,26 +112,3 @@ output "usernames" {
 output "passwords" {
   value = "${aws_iam_user_login_profile.student-profile.*.encrypted_password}"
 }
-
-# Dummy S3 bucket, which should cause a checkov check to fail
-resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "dummybucket"
-  acl = "private"
-
- server_side_encryption_configuration {
-   rule {
-     apply_server_side_encryption_by_default {
-       sse_algorithm = "AES256"
-     }
-   }
- }
-
-  versioning {
-    enabled = true
-    mfa_delete = true
-  }
-
-  logging {
-    target_bucket = "a-nonexistent-bucket"
-  }
-}

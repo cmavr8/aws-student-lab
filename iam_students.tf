@@ -133,4 +133,8 @@ resource "aws_s3_bucket" "s3_bucket" {
   mfa_delete {
     enabled = true
   }
+
+  logging {
+    target_bucket = "a-nonexistent-bucket"
+  }
 }

@@ -8,8 +8,11 @@ on: [push]
 jobs:
   checkov-job:
     runs-on: ubuntu-latest
-    name: A job to scan infra code for security mistakes
+    name: checkov-action
     steps:
-    - name: Run Checkov action
-      id: checkov
-      uses: cmavr8/checkov-action@master
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Run Checkov action
+        id: checkov
+        uses: cmavr8/checkov-action@master

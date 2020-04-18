@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: Run Checkov action
       id: checkov
-      uses: cmavr8/checkov-action@v1
+      uses: cmavr8/checkov-action

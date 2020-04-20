@@ -1,4 +1,5 @@
 # aws-student-lab
+![checkov-action](https://github.com/cmavr8/aws-student-lab/workflows/checkov-action/badge.svg?branch=master)
 
 Basic setup of an AWS account, including some users (students of a lab, in this example). 
 

@@ -17,7 +17,7 @@ del lines[-1] # And last
 
 print("Usernames and passwords (no spaces):")
 
-for i, line in lines:
+for i, line in enumerate(lines):
     # Strip extra stuff and decode base64
     strippedline = line.strip(',').strip('"')
     decodedline = base64.b64decode(strippedline)

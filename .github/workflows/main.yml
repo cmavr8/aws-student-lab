@@ -15,4 +15,4 @@ jobs:
 
       - name: Run Checkov action
         id: checkov
-        uses: cmavr8/checkov-action@v2
+        uses: cmavr8/checkov-action@v5

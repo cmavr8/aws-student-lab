@@ -5,7 +5,7 @@ howmanystudents = 1
 notifemail = "CHANGE_THIS@TO_THE_RIGHT_MAIL.com"
 
 # The monthly budget in US Dollars.
-# There a small bug here: if you input an integer, tf will want to re-apply this every time.
+# There is a small bug here: if you input an integer, tf will want to re-apply this every time.
 budget = 19.99
 
 #The Keybase user that will be used to encrypt passwords.

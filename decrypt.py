@@ -13,14 +13,13 @@ with open("SUPERSECRET") as file:
     lines = [line.strip() for line in file]
 
 del lines[0] # Delete first element
-del lines[len(lines)-1] # And last
+del lines[-1] # And last
 
 print("Usernames and passwords (no spaces):")
 
-i = 0
-for line in lines:
+for i, line in enumerate(lines):
     # Strip extra stuff and decode base64
-    strippedline = line.strip(",").strip('"')
+    strippedline = line.strip(',').strip('"')
     decodedline = base64.b64decode(strippedline)
 
     # Pass the decoded line to keybase, for decryption
@@ -28,4 +27,3 @@ for line in lines:
     stdout_data = p.communicate(input=decodedline)[0]
 
     print("student.{}".format(i), stdout_data.decode())
-    i+=1
